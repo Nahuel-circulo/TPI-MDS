@@ -75,8 +75,10 @@
       </div>
       <!--  -->
       <div class="navbar__menu__links">
-        <navbar-menu-link type="NuxtLink" url="/" icon="/img/icons/home.png">
-          Inicio
+        <navbar-menu-link type="NuxtLink" url="/">
+          <v-icon>
+            mdi-home
+          </v-icon> Inicio
         </navbar-menu-link>
         <navbar-menu-link type="NuxtLink" url="/nosotros">
           Nosotros
@@ -93,7 +95,7 @@
           <div></div>
           <span class="d-flex justify-space-between">
             Servicios
-            <img src="/img/icons/dropdown-white.png" class="ml-auto" />
+            <v-icon>mdi-chevron-down</v-icon>
           </span>
           <div></div>
 
