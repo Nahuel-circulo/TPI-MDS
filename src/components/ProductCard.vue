@@ -1,7 +1,6 @@
 <template>
   <v-card class="mx-auto" max-width="344">
     <v-img v-if="image" :src="require(`@/assets/comidas/${image}`)"></v-img>
-
     <v-card-title>
       {{ title }}
     </v-card-title>
