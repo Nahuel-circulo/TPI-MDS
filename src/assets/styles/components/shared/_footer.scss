@@ -1,6 +1,6 @@
 .footer {
-    background: $cmr-fuchsia;
-    color: $cmr-white !important;
+    background: $sentidos-black;
+    color: $sentidos-white !important;
     //font
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@
       .footer__location {
   
         &-title {
-          color: $cmr-white;
+          color: $sentidos-white;
           font-size: 16px;
           font-weight: 600;
           margin-bottom: 5px;
@@ -45,7 +45,7 @@
         }
   
         &-icon {
-          color: $cmr-white !important;
+          color: $sentidos-white !important;
           margin-right: 10px;
         }
       }
@@ -60,7 +60,7 @@
     }
   
     &__copyright {
-      border-top: .5px solid $cmr-white;
+      border-top: .5px solid $sentidos-white;
       padding: 15px 0;
       font-size: 12px;
       display: flex;

@@ -1,43 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
-$cmr-gray: #4E535A;
-$cmr-light-gray: #A5AAAF;
-$cmr-lighter-gray: #EEEEEE;
-$cmr-yellow: #F7AA00;
-$cmr-fuchsia: #C22B7D;
-$cmr-purple: #92278F;
-$cmr-blue: #1D70B7;
-$cmr-white:#FFF;
 
-$cmr-primary: $cmr-purple;
-
+$sentidos-black:#1A2223;
+$sentidos-light-gray: #E9EAED;
+$sentidos-gray: #545454;
+$sentidos-gold: #BB8A00;
+$sentidos-pink: #CD7A7F;
+$sentidos-white:#FFF;
 
 $colors: (
-  cmr-gray: $cmr-gray,
-  cmr-light-gray: $cmr-light-gray,
-  cmr-lighter-gray: $cmr-lighter-gray,
-  cmr-yellow: $cmr-yellow,
-  cmr-fuchsia: $cmr-fuchsia,
-  cmr-purple: $cmr-purple,
-  cmr-blue: $cmr-blue,
-  cmr-white:$cmr-white,
-  cmr-primary: $cmr-primary,
+  sentidos-light-gray: $sentidos-light-gray,
+  sentidos-gray: $sentidos-gray,
+  sentidos-gold: $sentidos-gold,
+  sentidos-pink: $sentidos-pink,
+  sentidos-white:$sentidos-white,
 );
 
 @each $colorName, $color in $colors {
   .bg--#{$colorName} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .text--#{$colorName} {
     color: $color !important;
   }
 }
 
-$font-montserrat: 'Montserrat', sans-serif;
+$font-merriweather: 'Merriweather', serif;
 
-.font-montserrat {
-  font-family: $font-montserrat !important;
+.font-merriweather {
+  font-family: $font-merriweather !important;
 }
 
 .logo{

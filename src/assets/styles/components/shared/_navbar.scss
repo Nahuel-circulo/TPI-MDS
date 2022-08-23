@@ -8,9 +8,10 @@
   height: 80px;
   display: flex;
   align-items: center;
-  font-family: $font-montserrat;
-  background: rgba(255, 254, 254, 0.6);
+  font-family: $font-merriweather;
+  background: $sentidos-black;
   z-index: 100;
+  border-bottom: 4px solid $sentidos-gold;
 
   &__home {
     a {
@@ -42,7 +43,7 @@
     justify-content: center;
 
     &__link {
-      color: $cmr-gray;
+      color: $sentidos-white;
       margin: 0 10px;
       font-size: 14px;
       font-weight: 500;
@@ -50,18 +51,23 @@
       position: relative;
 
       button {
-        color: $cmr-gray !important;
+        color: $sentidos-pink !important;
         border-bottom: 1px solid transparent;
       }
 
       a {
         text-decoration: none;
-        color: $cmr-gray !important;
+        color: $sentidos-white !important;
         transition: all ease-in-out 0.3s;
-        border-bottom: 1px solid transparent;
+        border-bottom: 2px solid transparent;
 
         &:hover {
-          border-bottom: 1px solid $cmr-gray;
+          border-bottom: 2px solid $sentidos-pink;
+        }
+
+        &:active{
+          border-bottom: 1px solid $sentidos-pink;
+          color: $sentidos-pink;
         }
       }
     }
@@ -80,11 +86,11 @@
         padding: 15px 10px;
         text-align: center;
         margin: 0;
-        color: $cmr-gray;
+        color: $sentidos-gray;
         transition: color ease-in-out 0.3s;
 
         &:hover {
-          color: $cmr-light-gray !important;
+          color: $sentidos-light-gray !important;
           border-bottom: 1px solid transparent;
         }
       }
@@ -105,8 +111,8 @@
     left: 0;
     width: 100%;
     padding: 20px 0;
-    background-color: $cmr-fuchsia;
-    color: $cmr-white;
+    background-color: $sentidos-black;
+    color: $sentidos-white;
     z-index: 150;
     transition: all linear 0.5s;
     max-height: 100vh;
@@ -150,7 +156,7 @@
         border-radius: 90px;
 
         &:hover {
-          background-color: darken($cmr-fuchsia, 5%);
+          background-color: darken($sentidos-black, 5%);
         }
 
         img {
@@ -301,7 +307,7 @@
           }
 
           &:hover {
-            background-color: darken($cmr-fuchsia, 5%);
+            background-color: darken($sentidos-black, 5%);
           }
         }
 
@@ -315,13 +321,13 @@
           &__link {
             width: fit-content;
             text-decoration: none;
-            color: $cmr-white !important;
+            color: $sentidos-white !important;
             padding: 4px 0;
             transition: all ease-in 0.3s;
             border-bottom: 2px solid transparent;
 
             &:hover {
-              border-bottom: 2px solid $cmr-white;
+              border-bottom: 2px solid $sentidos-white;
             }
           }
         }

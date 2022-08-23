@@ -52,7 +52,7 @@
       <!--  -->
       <div class="navbar__hamburguer">
         <button @click="menuToggle(true)">
-          <v-icon color="black" small>mdi-menu</v-icon>
+          <v-icon color="white" small>mdi-menu</v-icon>
         </button>
       </div>
     </div>
