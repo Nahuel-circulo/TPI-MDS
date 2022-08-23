@@ -2,7 +2,7 @@
   <v-footer class="footer font-inter">
     <div class="footer__container">
       <router-link class="footer__logo" to="/">
-        <img :src="require('../assets/logo.svg')" alt="" />
+        <!-- <img :src="require('../assets/logo.svg')" alt="" /> -->
       </router-link>
       <div class="footer__information">
         <div class="footer__location">

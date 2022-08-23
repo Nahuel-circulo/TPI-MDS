@@ -46,7 +46,7 @@
           </div>
         </div> -->
         <div class="navbar__links__link">
-          <router-link to="/pagoencasa"> Nuestra APP </router-link>
+          <router-link to="/pagoencasa">Eventos</router-link>
         </div>
       </div>
       <!--  -->
@@ -118,7 +118,7 @@
           </div>
         </div>
         <navbar-menu-link type="NuxtLink" url="/pagoencasa">
-          Nuestra App
+          Eventos
         </navbar-menu-link>
         <navbar-menu-link type="NuxtLink" url="/preguntas-frecuentes">
           Preguntas Frecuentes

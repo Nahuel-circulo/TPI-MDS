@@ -16,6 +16,9 @@
     &__logo {
       margin-top: 25px;
       width: 100px;
+      background: rgb(237,236,244);
+      background: radial-gradient(circle, rgba(205,122,127,1) 3%, rgba(26,34,35,0.835171568627451) 80%);      
+
     }
   
   
@@ -56,6 +59,7 @@
   
       a {
         margin-right: 10px;
+        text-decoration: none !important;
       }
     }
   
