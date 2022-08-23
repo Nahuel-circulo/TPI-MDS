@@ -1,7 +1,7 @@
 .footer {
     background: $sentidos-black;
-    color: $sentidos-white !important;
-    //font
+    color: $sentidos-pink !important;
+    font-family: $font-merriweather !important;
     display: flex;
     justify-content: center;
     padding: 10px 20px !important;
@@ -27,7 +27,7 @@
       .footer__location {
   
         &-title {
-          color: $sentidos-white;
+          color: $sentidos-pink;
           font-size: 16px;
           font-weight: 600;
           margin-bottom: 5px;
@@ -45,7 +45,7 @@
         }
   
         &-icon {
-          color: $sentidos-white !important;
+          color: $sentidos-pink !important;
           margin-right: 10px;
         }
       }
@@ -60,7 +60,7 @@
     }
   
     &__copyright {
-      border-top: .5px solid $sentidos-white;
+      border-top: 2px solid $sentidos-gold;
       padding: 15px 0;
       font-size: 12px;
       display: flex;
