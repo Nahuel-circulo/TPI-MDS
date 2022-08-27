@@ -11,19 +11,21 @@
   font-family: $font-merriweather;
   background: $sentidos-black;
   z-index: 100;
-  border-bottom: 4px solid $sentidos-gold;
+  border-bottom: 5px solid $sentidos-gold;
 
   &__home {
     a {
       display: flex;
       align-items: center;
       justify-content: center;
+      border-bottom: none !important;
 
       img {
-        width: 88px;
+        width: 150px;
         padding: 5px;
-        background: rgb(237,236,244);
-        background: radial-gradient(circle, rgba(205,122,127,1) 3%, rgba(26,34,35,0.835171568627451) 80%);      }
+        
+        // background: radial-gradient(circle, rgba(205,122,127,1) 3%, rgba(26,34,35,0.835171568627451) 80%);      
+      }
     }
   }
 
@@ -54,7 +56,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 500;
       font-style: normal;
       position: relative;
@@ -70,11 +72,7 @@
         text-decoration: none;
         color: $sentidos-white !important;
         transition: all ease-in-out 0.3s;
-        border-bottom: 2px solid transparent;
 
-        &:hover {
-          border-bottom: 2px solid $sentidos-white;
-        }
 
 
       }
@@ -194,6 +192,7 @@
       text-decoration: none;
       border-bottom: 1px solid rgba(255, 255, 255, 0.5);
       position: relative;
+
 
       &.servicios {
         position: relative;
@@ -373,4 +372,8 @@
       justify-content: center;
     }
   }
+}
+
+.router-link-exact-active{
+  border-bottom: 2px solid $sentidos-pink !important;
 }

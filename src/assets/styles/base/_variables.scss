@@ -39,3 +39,14 @@ $font-merriweather: 'Merriweather', serif;
 .app-wrapper{
   background-color: $sentidos-light-gray;
 }
+
+@font-face {
+  font-family: 'Malibu';
+  src: '../../fonts/Malibu.ttf';
+}
+
+$font-malibu: 'Malabu',sans-serif !important;
+
+.font-malinu{
+  font-family: $font-malibu;
+}

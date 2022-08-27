@@ -1,132 +1,40 @@
 .footer {
-    background: $sentidos-black;
-    color: $sentidos-pink !important;
-    font-family: $font-merriweather !important;
-    display: flex;
-    justify-content: center;
-    padding: 10px 20px !important;
-  
-    &__container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start !important;
-      width: 100%;
+  // max-height: 200px !important;
+  background: $sentidos-black;
+  color: $sentidos-pink !important;
+  font-family: $font-merriweather !important;
+  max-height: 310px;
+
+  &__container {
+
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1366px;
+  }
+
+
+  &__info {
+    font-size: 14px;
+    font-weight: 500;
+
+    @media screen and (min-width:600px) {
+      font-size: 18px;
     }
-  
-    &__logo {
-      margin-top: 25px;
-      width: 100px;
-      background: rgb(237,236,244);
-      background: radial-gradient(circle, rgba(205,122,127,1) 3%, rgba(26,34,35,0.835171568627451) 80%);      
+    &-logo {
+      max-width: 150px;
+      margin: 50px auto;
+      width: 100%;
 
     }
-  
-  
-    &__information {
-      margin-top: 45px;
-      display: flex;
-      flex-direction: column;
-  
-      .footer__location {
-  
-        &-title {
-          color: $sentidos-pink;
-          font-size: 16px;
-          font-weight: 600;
-          margin-bottom: 5px;
-        }
-  
-        &-address {
-          font-size: 12px;
-          font-weight: 400;
-          margin-bottom: 0px;
-        }
-  
-        &-phone {
-          font-size: 12px;
-          font-weight: 400;
-        }
-  
-        &-icon {
-          color: $sentidos-pink !important;
-          margin-right: 10px;
-        }
-      }
-    }
-  
-    &__social-media {
-      margin: 30px 0;
-  
-      a {
-        margin-right: 10px;
-        text-decoration: none !important;
-      }
-    }
-  
-    &__copyright {
-      border-top: 2px solid $sentidos-gold;
-      padding: 15px 0;
-      font-size: 12px;
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      
-  
-      p {
-        img {
-          height: 12px;
-        }
-      }
-    }
+
+
   }
-  
-  @media screen and (min-width:600px) {
-    .footer {
-      &__information {
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-      }
-    }
-  }
-  
-  @media screen and (min-width:900px) {
-  
-    .footer {
-      &__container {
-        max-width: 1366px;
-      }
-  
-      &__information {
-          margin-bottom: 30px;
-        .footer__location {
-          &-title {
-            font-size: 16px;
-            font-weight: 600;
-          }
-  
-          &-address {
-            font-size: 14px;
-          }
-  
-          &-phone {
-            font-size: 14px;
-          }
-        }
-      }
-  
-  
-      &__copyright {
-        font-size: 14px;
-        padding: 20px 0;
-        
-  
-        p {
-            margin: 0;
-          img {
-            height: 14px;
-          }
-        }
-      }
-    }
-  }
+}
+
+.text-divider {
+  color: $sentidos-gold;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 7px;
+}
