@@ -15,7 +15,7 @@
           <router-link to="/">Inicio</router-link>
         </div>
         <div class="navbar__links__link">
-          <router-link to="/nosotros">Nosotros</router-link>
+          <router-link to="/eventos">Eventos</router-link>
         </div>
         <div class="navbar__links__link">
           <router-link to="/menu">Menu</router-link>
@@ -46,7 +46,7 @@
           </div>
         </div> -->
         <div class="navbar__links__link">
-          <router-link to="/pagoencasa">Eventos</router-link>
+          <router-link to="/reservas">Reservas</router-link>
         </div>
       </div>
       <!--  -->
@@ -80,8 +80,8 @@
             mdi-home
           </v-icon> Inicio
         </navbar-menu-link>
-        <navbar-menu-link type="NuxtLink" url="/nosotros">
-          Nosotros
+        <navbar-menu-link type="NuxtLink" url="/reservas">
+          Reservas
         </navbar-menu-link>
 
         <navbar-menu-link type="NuxtLink" url="/cajas-de-la-ciudad">

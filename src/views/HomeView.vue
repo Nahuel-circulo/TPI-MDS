@@ -1,7 +1,12 @@
 <template>
-  <div>
+  <main class="homeView">
     <Carousel />
-  </div>
+    <div class="reserva-section">
+      <v-btn plain elevation="0" block class="reserva-section__btn">
+        Reserva aquí
+      </v-btn>
+    </div>
+  </main>
 </template>
 
 <script lang="ts">
