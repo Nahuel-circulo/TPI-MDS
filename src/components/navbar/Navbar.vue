@@ -15,10 +15,10 @@
           <router-link to="/">Inicio</router-link>
         </div>
         <div class="navbar__links__link">
-          <router-link to="/eventos">Eventos</router-link>
+          <router-link to="/menu">Menu</router-link>
         </div>
         <div class="navbar__links__link">
-          <router-link to="/menu">Menu</router-link>
+          <router-link to="/eventos">Eventos</router-link>
         </div>
         <!-- <div class="navbar__links__link">
           <button
@@ -80,14 +80,14 @@
             mdi-home
           </v-icon> Inicio
         </navbar-menu-link>
+        
+        <navbar-menu-link type="NuxtLink" url="/menu">
+          Menú
+        </navbar-menu-link>
         <navbar-menu-link type="NuxtLink" url="/reservas">
           Reservas
         </navbar-menu-link>
-
-        <navbar-menu-link type="NuxtLink" url="/cajas-de-la-ciudad">
-          Cajas de la ciudad
-        </navbar-menu-link>
-        <div
+        <!-- <div
           class="navbar__menu__link servicios"
           @mouseover="serviciosIsActive = true"
           @mouseleave="serviciosIsActive = false"
@@ -116,7 +116,7 @@
               Tarjeta Arcoiris
             </navbar-menu-link>
           </div>
-        </div>
+        </div> -->
         <navbar-menu-link type="NuxtLink" url="/pagoencasa">
           Eventos
         </navbar-menu-link>

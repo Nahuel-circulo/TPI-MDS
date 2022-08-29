@@ -15,15 +15,21 @@
     </div>
 
     <div class="eventosView__gallery">
-      <h4 class="eventosView__gallery-title">ALGUNAS FOTOGRAFÍAS DE NUESTROS EVENTOS</h4>
+      <h4 class="eventosView__gallery-title">
+        ALGUNAS FOTOGRAFÍAS DE NUESTROS EVENTOS
+      </h4>
 
       <v-row>
         <v-col cols="12" sm="6" md="4" lg="3" v-for="item in 8" :key="item">
           <div class="eventosView__gallery-card">
-            <v-img class="eventosView__gallery-card__image" cover src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-rRUBt97a_Uj-RjiDGlyyGDSQ1qHI9DY32g&usqp=CAU">
-
-            </v-img>
             
+              <v-img
+                class="eventosView__gallery-card__image"
+                cover
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-rRUBt97a_Uj-RjiDGlyyGDSQ1qHI9DY32g&usqp=CAU"
+              >
+              </v-img>
+          
           </div>
         </v-col>
       </v-row>
@@ -32,11 +38,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onMounted } from "vue";
 
 export default defineComponent({
   setup() {
+
+   
     //
   },
 });
 </script>
+
+

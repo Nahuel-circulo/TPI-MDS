@@ -135,11 +135,14 @@
       &__logo {
         position: absolute;
         left: 0;
-        padding: 15px 35px 10px 45px;
+        padding: 15px 30px 10px 30px;
         max-width: 155px;
         display: flex;
         justify-content: center;
         align-items: center;
+        a{
+          border-bottom: none !important;
+        }
 
 
         img {
