@@ -24,6 +24,15 @@ const routes: Array<RouteRecordRaw> = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: eventos" */ '../views/EventosView.vue')
   }
+  ,
+  {
+    path: '/login-signin',
+    name: 'login-signin',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: login-signin" */ '../views/LoginSigninView.vue')
+  }
 ]
 
 const router = createRouter({
