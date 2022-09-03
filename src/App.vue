@@ -30,6 +30,6 @@ export default defineComponent({
   position: relative;
   height: 100%;
   width: 100%;
-  padding-top:80px;
+  margin-top:80px;
 }
 </style>

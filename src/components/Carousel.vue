@@ -1,12 +1,13 @@
 <template>
   <v-carousel
     cycle
+
     height="500px"
     class="home-carousel"
     hide-delimiter-background
   >
-    <v-carousel-item v-for="(slide, i) in images" :key="i">
-      <v-img :src="slide" height="500px" cover class="home-carousel__image">
+    <v-carousel-item v-for="(slide, i) in images" :key="i" >
+      <v-img :src="slide"  height="500px" cover class="home-carousel__image">
         <div class="home-carousel__container">
           <div class="home-carousel__container__item font-merriweather">
             <h2 class="home-carousel__container__item-brand">Sentidos</h2>

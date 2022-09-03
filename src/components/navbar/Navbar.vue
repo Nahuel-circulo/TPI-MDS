@@ -117,7 +117,7 @@
             </navbar-menu-link>
           </div>
         </div> -->
-        <navbar-menu-link type="NuxtLink" url="/pagoencasa">
+        <navbar-menu-link type="NuxtLink" url="/eventos">
           Eventos
         </navbar-menu-link>
         <navbar-menu-link type="NuxtLink" url="/preguntas-frecuentes">

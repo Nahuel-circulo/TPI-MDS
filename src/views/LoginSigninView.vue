@@ -1,5 +1,5 @@
 <template>
-  <div style="min-height: 460px;">
+  <div style="min-height: 460px">
     <div class="backgroud-view">
       <div class="backgroud-view__left"></div>
       <div class="backgroud-view__right"></div>
