@@ -1,16 +1,18 @@
 <template>
   <v-carousel
     cycle
-
     height="500px"
     class="home-carousel"
     hide-delimiter-background
   >
-    <v-carousel-item v-for="(slide, i) in images" :key="i" >
-      <v-img :src="slide"  height="500px" cover class="home-carousel__image">
+    <v-carousel-item v-for="(slide, i) in images" :key="i">
+      <v-img :src="slide" height="500px" cover class="home-carousel__image">
         <div class="home-carousel__container">
           <div class="home-carousel__container__item font-merriweather">
-            <v-img :src="require('../assets/Sentidos_text.svg')" class="home-carousel__container__item-brand"></v-img>
+            <v-img
+              :src="require('../assets/Sentidos_text.svg')"
+              class="home-carousel__container__item-brand"
+            ></v-img>
             <h3 class="home-carousel__container__item-title">
               Conocé nuestros servicios
             </h3>
@@ -74,7 +76,7 @@ export default defineComponent({
       color: white;
       z-index: 100;
 
-      &-brand{
+      &-brand {
         max-width: 550px;
         margin: 0 auto;
       }
@@ -82,7 +84,7 @@ export default defineComponent({
         text-transform: uppercase;
         font-weight: 700;
         font-size: 24px;
-        @media screen and (min-width:600px) {
+        @media screen and (min-width: 600px) {
           font-size: 38px;
         }
       }
@@ -93,7 +95,7 @@ export default defineComponent({
         text-transform: uppercase;
         font-weight: 600;
         font-size: 18px;
-        @media screen and (min-width:600px) {
+        @media screen and (min-width: 600px) {
           font-size: 24px;
         }
       }

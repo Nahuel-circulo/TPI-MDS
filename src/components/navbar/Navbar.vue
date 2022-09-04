@@ -120,8 +120,8 @@
         <navbar-menu-link type="NuxtLink" url="/eventos">
           Eventos
         </navbar-menu-link>
-        <navbar-menu-link type="NuxtLink" url="/preguntas-frecuentes">
-          Preguntas Frecuentes
+        <navbar-menu-link type="NuxtLink" url="/login-signin">
+          Login/Signin
         </navbar-menu-link>
         <navbar-menu-link type="NuxtLink" url="/novedades">
           Novedades
@@ -143,9 +143,9 @@
 
       <div class="navbar__menu--desktop__links">
         <router-link
-          to="/preguntas-frecuentes"
+          to="/login-signin"
           class="navbar__menu--desktop__links__link"
-          >Preguntas Frecuentes</router-link
+          >Login/Signin</router-link
         >
         <router-link to="/novedades" class="navbar__menu--desktop__links__link"
           >Novedades</router-link
