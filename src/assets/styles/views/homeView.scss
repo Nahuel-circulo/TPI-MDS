@@ -1,15 +1,14 @@
-
-.homeView{
+.homeView {
     font-family: $font-merriweather;
 
 
 
 }
 
-.reserva-section{
+.reserva-section {
 
 
-    &__btn{
+    &__btn {
         height: 60px !important;
         font-size: 18px !important;
         font-weight: 700 !important;
@@ -19,4 +18,28 @@
     }
 }
 
+.comentario {
+    background-color: $sentidos-black;
+
+    &__comentario {
+        color: white;
+        font-size: 18px;
+    }
+
+    &__image {
+        max-width: 300px;
+    }
+
+    @media screen and (min-width:768px) {
+        &__comentario {
+            color: white;
+            font-size: 28px;
+            max-width: 600px;
+        }
+    
+        &__image {
+            max-width: 300px;
+        }
+    }
+}
 

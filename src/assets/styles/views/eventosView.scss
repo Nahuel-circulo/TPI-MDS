@@ -4,6 +4,7 @@
     font-family: $font-merriweather;
     color: $sentidos-black;
     margin: 0 auto;
+    position: relative;
     padding: 0 10px;
 
     &__header {
@@ -78,3 +79,21 @@
     }
 
 }
+
+.image__overlay{
+
+
+    &-img{
+        width: 100% !important;
+        max-width: 900px !important;
+        margin: 0 auto !important;
+    }
+    &-btn{
+        margin: 0 auto;
+    }
+}
+
+.v-overlay__content{
+    width: 100% !important;
+}
+

@@ -22,31 +22,53 @@
       <v-row>
         <v-col cols="12" sm="6" md="4" lg="3" v-for="item in 8" :key="item">
           <div class="eventosView__gallery-card">
-            
-              <v-img
-                class="eventosView__gallery-card__image"
-                cover
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-rRUBt97a_Uj-RjiDGlyyGDSQ1qHI9DY32g&usqp=CAU"
-              >
-              </v-img>
-          
+            <v-img
+              class="eventosView__gallery-card__image pointer"
+              cover
+              @click="viewImageOverlay"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-rRUBt97a_Uj-RjiDGlyyGDSQ1qHI9DY32g&usqp=CAU"
+            >
+            </v-img>
           </div>
         </v-col>
       </v-row>
     </div>
+
+    <v-dialog v-model="overlay" class="image__overlay">
+      <v-img
+        class="image__overlay-img"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-rRUBt97a_Uj-RjiDGlyyGDSQ1qHI9DY32g&usqp=CAU"
+      ></v-img>
+      <div class="image__overlay-btn mt-4">
+        <v-btn color="#BB8A00" :block="false" @click="overlay = false"
+          >Cerrar Imagen</v-btn
+        >
+      </div>
+    </v-dialog>
   </main>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from "vue";
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   setup() {
+    const overlay = ref(false);
+    const viewImageOverlay = () => {
+      console.log("muestra");
+      overlay.value = !overlay.value;
+    };
 
-   
-    //
+    return {
+      overlay,
+      viewImageOverlay,
+    };
   },
 });
 </script>
 
-
+<style lang="scss" scoped>
+.pointer {
+  cursor: pointer;
+}
+</style>
