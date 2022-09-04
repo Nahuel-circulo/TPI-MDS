@@ -1,0 +1,28 @@
+.tables__container {
+    background-color: white;
+    max-width: 700px;
+    border: 3px solid #BB8A00;
+    border-radius: 10px;
+    padding: 10px !important;
+
+    @media screen and (min-width:768px) {
+        padding: 20px !important;
+    }
+}
+
+.icon-color {
+    color: white !important;
+}
+
+.reservas__form-field {
+    background-color: $sentidos-white;
+    color: $sentidos-black;
+}
+
+.v-field {
+    border: 2px solid $sentidos-gold !important;
+}
+
+.v-input__details {
+    background-color: #E9EAED;
+}

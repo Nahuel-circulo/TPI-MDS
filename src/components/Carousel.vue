@@ -10,7 +10,7 @@
       <v-img :src="slide"  height="500px" cover class="home-carousel__image">
         <div class="home-carousel__container">
           <div class="home-carousel__container__item font-merriweather">
-            <h2 class="home-carousel__container__item-brand">Sentidos</h2>
+            <v-img :src="require('../assets/Sentidos_text.svg')" class="home-carousel__container__item-brand"></v-img>
             <h3 class="home-carousel__container__item-title">
               Conocé nuestros servicios
             </h3>
@@ -75,13 +75,8 @@ export default defineComponent({
       z-index: 100;
 
       &-brand{
-        margin: 30px 0;
-        font-size: 70px;
-        text-align: center;
-        font-family: 'malibu';
-        @media screen and (min-width:600px) {
-          font-size: 150px;
-        }
+        max-width: 550px;
+        margin: 0 auto;
       }
       &-title {
         text-transform: uppercase;

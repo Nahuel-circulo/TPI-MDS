@@ -1,16 +1,79 @@
 <template>
-  <div>
-    <h1>Reservas</h1>
-    <v-row class="pa-0 ma-0">
-      <v-col class="d-flex justify-center" cols="3" v-for="(item, i) in tables" :key="i">
-        <v-icon
-          @click="changeColor(item.position)"
-          :color="item.reservado ? 'blue' : 'black'"
-          >mdi-table-chair</v-icon
-        >
-      </v-col>
-    </v-row>
-  </div>
+  <main class="reservas__view">
+    <v-container>
+      <h1>Reservas - Seleccione su mesa</h1>
+      <v-row>
+        <v-col cols="12" sm="7" md="7">
+          <v-row class="pa-0 ma-0 tables__container">
+            <v-col 
+              class="d-flex justify-center"
+              cols="3"
+              v-for="(item, i) in tables"
+              :key="i"
+            >
+              <v-btn
+                class="icon-color"
+                @click="changeColor(item.position)"
+                :color="item.reservado ? '#CD7A7F' : '#545454'"
+                icon="mdi-table-furniture"
+              >
+              </v-btn>
+            </v-col>
+          </v-row>
+        </v-col>
+        <v-col cols="12" sm="5" md="5">
+          <v-form>
+            <v-text-field
+              class="reservas__form-field"
+              v-model="name"
+              :rules="nameRules"
+              :counter="30"
+              label="Nombre y Apellido"
+              required
+              :variant="'solo'"
+            ></v-text-field>
+            <v-text-field
+              class="reservas__form-field"
+              v-model="email"
+              :rules="emailRules"
+              label="E-mail"
+              required
+              :variant="'solo'"
+            ></v-text-field>
+            <v-text-field
+              class="reservas__form-field"
+              v-model="table"
+              readonly
+              label="Mesa"
+              required
+              :variant="'solo'"
+            ></v-text-field>
+
+            <v-select
+              class="reservas__form-field"
+              :items="items"
+              label="Cantidad de Comensales"
+              v-model="cantidad"
+              :variant="'solo'"
+            ></v-select>
+
+            <v-textarea
+              :variant="'solo'"
+              class="reservas__form-field"
+              name="input-7-4"
+              :counter="144"
+              :rules="comentarioRules"
+              label="Comentario (opcional)"
+            ></v-textarea>
+
+            <v-btn color="#CD7A7F" class="white--text">
+              Siguiente
+            </v-btn>
+          </v-form>
+        </v-col>
+      </v-row>
+    </v-container>
+  </main>
 </template>
 
 <script lang="ts">
@@ -18,6 +81,28 @@ import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   setup() {
+    const table = ref(0);
+    const comentario = ref();
+    const comentarioRules = [
+      (v: any) =>
+        v.length <= 30 || "Comentario debe tener como maximo 144 caracteres",
+    ];
+    const email = ref();
+    const emailRules = [
+      (v: any) => !!v || "Email es requerido",
+      (v: any) => /.+@.+\..+/.test(v) || "Debe ser un email valido",
+    ];
+
+    const name = ref();
+
+    const nameRules = [
+      (v: any) => !!v || "Nombre es requerido",
+      (v: any) =>
+        v.length <= 30 || "Nombre debe tener como maximo 30 caracteres",
+    ];
+
+    const cantidad = ref(1);
+    const items = [1, 2, 3, 4];
     const tables = ref([
       {
         position: 1,
@@ -29,7 +114,7 @@ export default defineComponent({
       },
       {
         position: 3,
-        reservado: true,
+        reservado: false,
       },
       {
         position: 4,
@@ -100,15 +185,32 @@ export default defineComponent({
         reservado: false,
       },
     ]);
+
     const changeColor = (position: number) => {
       const index = tables.value.findIndex(
         (table) => table.position === position
       );
-      tables.value[index].reservado = !tables.value[index].reservado;
+      if (table.value == 0) {
+        tables.value[index].reservado = !tables.value[index].reservado;
+        table.value = position;
+      } else if (table.value == position) {
+        table.value = 0;
+        tables.value[index].reservado = !tables.value[index].reservado;
+      }
     };
+
     return {
       changeColor,
       tables,
+      table,
+      name,
+      nameRules,
+      email,
+      emailRules,
+      comentario,
+      comentarioRules,
+      cantidad,
+      items,
     };
   },
 });
