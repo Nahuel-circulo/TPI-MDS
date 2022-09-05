@@ -31,3 +31,14 @@
 .v-input__details {
     background-color: #E9EAED;
 }
+
+
+.date-picker{
+    padding: 10px !important;
+    border: 2px solid $sentidos-gold;
+    border-radius: 4px;
+    &__label{
+        margin-right: 15px;
+    }
+    
+}

@@ -5,7 +5,7 @@
       <v-row>
         <v-col cols="12" sm="7" md="7" lg="6">
           <v-row class="pa-0 ma-0 tables__container">
-            <v-col 
+            <v-col
               class="d-flex justify-center"
               cols="3"
               v-for="(item, i) in tables"
@@ -17,7 +17,7 @@
                 :color="item.reservado ? '#CD7A7F' : '#545454'"
                 icon
               >
-              {{item.position}}
+                {{ item.position }}
               </v-btn>
             </v-col>
           </v-row>
@@ -57,7 +57,16 @@
               v-model="cantidad"
               :variant="'solo'"
             ></v-select>
-
+            <label class="date-picker__label" for="fecha">Fecha</label>
+            <input
+              :min="hoy"
+              v-model="fecha"
+              id="fecha"
+              class="reservas__form-field date-picker mb-4"
+              type="date"
+              name="Fecha"
+            />
+            {{fecha}}
             <v-textarea
               :variant="'solo'"
               class="reservas__form-field"
@@ -67,9 +76,7 @@
               label="Comentario (opcional)"
             ></v-textarea>
 
-            <v-btn color="#CD7A7F" class="white--text">
-              Siguiente
-            </v-btn>
+            <v-btn color="#CD7A7F" class="white--text"> Siguiente </v-btn>
           </v-form>
         </v-col>
       </v-row>
@@ -79,9 +86,11 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-
+import moment from 'moment';
 export default defineComponent({
   setup() {
+    const hoy = moment().format('YYYY-MM-DD') 
+    const fecha = ref();
     const table = ref(0);
     const comentario = ref();
     const comentarioRules = [
@@ -212,6 +221,8 @@ export default defineComponent({
       comentarioRules,
       cantidad,
       items,
+      fecha,
+      hoy
     };
   },
 });
