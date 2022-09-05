@@ -8,12 +8,11 @@
     </div>
     <h2 class="ml-8 mt-2">Lo que dicen Nuestros Clientes</h2>
     <v-carousel
-    
       color="#CD7A7F"
       :show-arrows="false"
       cycle
       height="auto"
-      class="my-2 "
+      class="my-2"
       hide-delimiter-background
     >
       <v-carousel-item
@@ -45,7 +44,6 @@
                 </v-img>
                 <v-rating
                   color="#BB8A00"
-                  
                   v-model="comentario.calificacion"
                   class="ma-2"
                   density="default"

@@ -3,7 +3,7 @@
     <v-container>
       <h1>Reservas - Seleccione su mesa</h1>
       <v-row>
-        <v-col cols="12" sm="7" md="7">
+        <v-col cols="12" sm="7" md="7" lg="6">
           <v-row class="pa-0 ma-0 tables__container">
             <v-col 
               class="d-flex justify-center"
@@ -15,13 +15,14 @@
                 class="icon-color"
                 @click="changeColor(item.position)"
                 :color="item.reservado ? '#CD7A7F' : '#545454'"
-                icon="mdi-table-furniture"
+                icon
               >
+              {{item.position}}
               </v-btn>
             </v-col>
           </v-row>
         </v-col>
-        <v-col cols="12" sm="5" md="5">
+        <v-col cols="12" sm="5" md="5" lg="6">
           <v-form>
             <v-text-field
               class="reservas__form-field"
