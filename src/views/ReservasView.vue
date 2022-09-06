@@ -49,14 +49,37 @@
               required
               :variant="'solo'"
             ></v-text-field>
+            <div class="mb-2">
+              <label class="date-picker__label" for="cantidad"
+                >Cantidad de comensales</label
+              >
+              <select
+                name="cantidad"
+                class="reservas__form-field v-field custom_select mb-"
+                label="Cantidad de Comensales"
+                v-model="cantidad"
+              >
+                <option
+                  v-for="(item, i) in items"
+                  :value="item"
+                  :key="i + item"
+                >
+                  {{ item }}
+                </option>
+              </select>
+            </div>
 
-            <v-select
-              class="reservas__form-field"
-              :items="items"
-              label="Cantidad de Comensales"
-              v-model="cantidad"
-              :variant="'solo'"
-            ></v-select>
+            <div class="mb-2">
+              <label class="date-picker__label" for="horario">Horario</label>
+              <select
+                name="horario"
+                class="reservas__form-field v-field custom_select mb-"
+                v-model="horario"
+              >
+                <option value="Matutino">Matutino</option>
+                <option value="Nocturno">Nocturno</option>
+              </select>
+            </div>
             <label class="date-picker__label" for="fecha">Fecha</label>
             <input
               :min="hoy"
@@ -66,7 +89,6 @@
               type="date"
               name="Fecha"
             />
-            {{fecha}}
             <v-textarea
               :variant="'solo'"
               class="reservas__form-field"
@@ -86,10 +108,10 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import moment from 'moment';
+import moment from "moment";
 export default defineComponent({
   setup() {
-    const hoy = moment().format('YYYY-MM-DD') 
+    const hoy = moment().format("YYYY-MM-DD");
     const fecha = ref();
     const table = ref(0);
     const comentario = ref();
@@ -110,7 +132,7 @@ export default defineComponent({
       (v: any) =>
         v.length <= 30 || "Nombre debe tener como maximo 30 caracteres",
     ];
-
+    const horario = ref("Matutino");
     const cantidad = ref(1);
     const items = [1, 2, 3, 4];
     const tables = ref([
@@ -222,7 +244,8 @@ export default defineComponent({
       cantidad,
       items,
       fecha,
-      hoy
+      hoy,
+      horario,
     };
   },
 });
